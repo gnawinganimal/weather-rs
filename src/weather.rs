@@ -1,9 +1,9 @@
 use serde::{Serialize, Deserialize};
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Current {
+pub struct CurrentResponse {
     pub location: Location,
-    pub current:  Weather,
+    pub current:  Current,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -19,7 +19,7 @@ pub struct Location {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Weather {
+pub struct Current {
     pub last_updated_epoch: u32,
     pub last_updated:       String,
     pub temp_c:             f32,
